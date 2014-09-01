@@ -27,7 +27,7 @@ def post(url, data):
 
 def triggerBVT(buildPath):
     posturl = "http://10.204.210.160:8000/ci/bvt/"
-    data = {'user':'jim_wan','task_template_id':27,'taskName':'iTISBVT',
+    data = {'user':'leslie_li','task_template_id':99,'taskName':'Apple_Tuner_Daily_Build_BVT',
     'buildPath':buildPath
     }
 ##    logging.info("#####")
@@ -37,5 +37,8 @@ def triggerBVT(buildPath):
         logging.info("hhhh %s"%e)
 
 if __name__ == '__main__':
-    triggerBVT()
+    buildPath=r'\\10.204.16.2\Home\Leslie_li\AP_Tuner\Trend Micro Internet Security-5.0.1149.dmg'
+    print buildPath
+    triggerBVT(buildPath)
+
 
